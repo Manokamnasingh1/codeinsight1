@@ -1,0 +1,168 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  color: rgb(240, 25, 25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+#home {
+  scroll-margin-top: 80px; /* adjust to match your navbar height */
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .toggle-button {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+    border-top: 1px solid #374151;
+  }
+}
+
+
+.navbar-center {
+  background-color: #e6ffe6;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-center h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2e7d32;
+}
+
+ .navbar-center {
+    margin-top: 0.5rem;
+  }
+  .navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+/* Hover effect */
+.navbar-links a:hover {
+  color: #2e7d32;
+  border-bottom: 2px solid #2e7d32;
+}
+
+/* Active page indicator */
+.navbar-links a.active {
+  color: #2e7d32;
+  border-bottom: 2px solid #2e7d32;
+}
+
+.blue-text {
+  color: #22b7ca;
+}
+
+.black-text {
+  color: black;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+  }
+
+  .navbar-brand {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .toggle-button {
+    display: block;
+    position: absolute;
+    right: 1rem;
+   
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    align-items: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+    border-top: 1px solid #374151;
+  }
+}
+

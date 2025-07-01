@@ -1,0 +1,35 @@
+.footer {
+  background-color: #000;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-text {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-social {
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+/* Optional: Specific color per icon */
+.social-icon:first-child:hover {
+  color: #e1306c; /* Instagram pink */
+}
