@@ -13,7 +13,7 @@ export default function RequestForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/request', formData);
+      await axios.post('https://codeinsight1.onrender.com/api/request', formData);
       alert('Request submitted!');
       setFormData({ name: '', email: '', phone: '', service: '' });
     } catch (error) {
