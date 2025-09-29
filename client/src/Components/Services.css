@@ -1,12 +1,28 @@
+.services-section {
+  padding: 3rem 1rem;
+  background-color: #f3f4f6;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;            /* allows wrapping on small screens */
+  justify-content: center;    /* center all cards */
+  gap: 1.5rem;                /* space between cards */
+  margin-top: 2rem;
+}
+
 .service-card {
-  position: relative;
+  display: flex;              /* horizontal layout inside card */
+  align-items: center;
+  gap: 1rem;
   background-color: white;
   border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(135, 233, 250, 0.4);
-  padding: 3rem 1.5rem 1.5rem; /* extra space for icon */
-  width: 300px;
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(135, 233, 250, 0.4);
+  padding: 1.5rem;
+  flex: 1 1 300px;            /* allows cards to shrink and grow */
+  max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   opacity: 0;
@@ -14,47 +30,45 @@
   animation: fadeInUp 0.6s forwards, float 3s ease-in-out 0.6s infinite;
 }
 
-/* Hover effect */
-.service-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Add icon using pseudo-element */
+/* Icon container */
 .service-card::before {
   content: "";
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  flex-shrink: 0;
   width: 50px;
   height: 50px;
-  display: block;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-/* Assign different real-world icons for each card */
+/* Real-world icons for each card */
 .service-card:nth-child(1)::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png'); /* Website Development */
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png');
 }
 
 .service-card:nth-child(2)::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/3144/3144456.png'); /* E-commerce Solutions */
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3144/3144456.png');
 }
 
 .service-card:nth-child(3)::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/2910/2910763.png'); /* Portfolio Websites */
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2910/2910763.png');
 }
 
-/* Card titles and descriptions */
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
 .service-card h3 {
   color: #111827;
-  margin: 0.5rem 0 0 0;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
 }
 
 .service-card p {
   color: #4b5563;
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 /* Animations */
@@ -65,6 +79,15 @@
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
+
+/* Responsive: stack cards vertically on small screens */
+@media (max-width: 900px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
