@@ -24,7 +24,6 @@
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(135, 233, 250, 0.4);
   padding: 2rem 1.5rem;
-  flex: 1 1 300px;
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
