@@ -1,79 +1,70 @@
-.services-section {
-  padding: 3rem 1rem;
-  background-color: #f3f4f6;
-  text-align: center;
-}
-
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
 .service-card {
+  position: relative;
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(135, 233, 250, 0.4);
-  padding: 1.5rem;
+  padding: 3rem 1.5rem 1.5rem; /* extra space for icon */
   width: 300px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  /* Initial animation */
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s forwards, float 3s ease-in-out 0.6s infinite;
 }
 
-/* Stagger animation for multiple cards */
-.service-card:nth-child(1) { animation-delay: 0.1s; }
-.service-card:nth-child(2) { animation-delay: 0.3s; }
-.service-card:nth-child(3) { animation-delay: 0.5s; }
-
+/* Hover effect */
 .service-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-.service-card h3 {
-  color: #111827;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
+/* Add icon using pseudo-element */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.service-card:hover h3 {
-  color: #0ea5e9;
+/* Assign different real-world icons for each card */
+.service-card:nth-child(1)::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1055/1055687.png'); /* Website Development */
+}
+
+.service-card:nth-child(2)::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3144/3144456.png'); /* E-commerce Solutions */
+}
+
+.service-card:nth-child(3)::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2910/2910763.png'); /* Portfolio Websites */
+}
+
+/* Card titles and descriptions */
+.service-card h3 {
+  color: #111827;
+  margin: 0.5rem 0 0 0;
 }
 
 .service-card p {
   color: #4b5563;
-  transition: color 0.3s ease;
 }
 
-.service-card:hover p {
-  color: #2563eb;
-}
-
-/* Fade-in + slide-up */
+/* Animations */
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Floating animation */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
+
