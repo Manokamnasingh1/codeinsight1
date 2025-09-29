@@ -19,20 +19,61 @@
   box-shadow: 0 0 15px rgba(135, 233, 250, 0.4);
   padding: 1.5rem;
   width: 300px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Initial animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards, float 3s ease-in-out 0.6s infinite;
 }
 
+/* Stagger animation for multiple cards */
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.3s; }
+.service-card:nth-child(3) { animation-delay: 0.5s; }
+
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .service-card h3 {
   color: #111827;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: #0ea5e9;
 }
 
 .service-card p {
   color: #4b5563;
+  transition: color 0.3s ease;
 }
 
+.service-card:hover p {
+  color: #2563eb;
+}
 
+/* Fade-in + slide-up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
