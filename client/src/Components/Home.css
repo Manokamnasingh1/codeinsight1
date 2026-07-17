@@ -1,160 +1,261 @@
-
+/* ===========================
+   HERO SECTION
+=========================== */
 
 .hero-section {
-  background: #4b00b4; /* purple background */
-  color: white;
-  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #4b00b4 0%, #6c2cff 100%);
+  color: #fff;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;  /* vertically center content */
-  min-height: 80vh; /* full screen height */
+  align-items: center;
+  padding: 80px 8%;
   box-sizing: border-box;
 }
 
-
 .hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
+  gap: 60px;
 }
+
+/* ===========================
+   LEFT SIDE
+=========================== */
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
-  margin-right: 2rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 3.4rem;
+  line-height: 1.15;
+  margin-bottom: 25px;
   font-weight: 800;
-  margin-bottom: 1rem;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 35px;
 }
 
-.cta-button {
-  background-color: #ffbe0b;
-  color: black;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+/* ===========================
+   BUTTONS
+=========================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.primary-btn {
+  background: #ffc107;
+  color: #222;
   text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: .3s;
 }
 
-.cta-button:hover {
-  background-color: #ffa700;
+.primary-btn:hover {
+  background: #ffb300;
+  transform: translateY(-3px);
 }
 
+.secondary-btn {
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,.12);
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.hero-features {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,.10);
+  padding: 16px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+}
+
+.feature-item span {
+  font-size: 24px;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
 
 .hero-image {
-  position: relative;
   flex: 1;
-  min-width: 300px;
-  margin-top: 2rem;
+  position: relative;
   display: flex;
-  justify-content: flex-end; /* ⬅️ Push image to the right inside its container */
+  justify-content: center;
 }
-
-
 
 .hero-image img {
-  max-width: 80%;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.35);
 }
 
-.conversion-box {
+/* ===========================
+   FLOATING CARD
+=========================== */
+
+.hero-card {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
-  background-color: #ffbe0b;
-  color: #4b00b4;
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  bottom: -25px;
+  left: -20px;
+  background: rgba(255,255,255,.95);
+  color: #222;
+  border-radius: 18px;
+  padding: 20px;
+  width: 240px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.25);
 }
 
-.conversion-box h2 {
-  font-size: 1.8rem;
+.hero-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #4b00b4;
+}
+
+.hero-card ul {
+  padding-left: 20px;
   margin: 0;
 }
 
-.conversion-box span {
-  font-size: 0.9rem;
-  font-weight: bold;
+.hero-card li {
+  margin-bottom: 10px;
 }
 
-/* ✅ Responsive styles for small screens */
-@media (max-width: 768px) {
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
   .hero-content {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column-reverse;
     text-align: center;
   }
 
-  .hero-text {
-    margin-right: 0;
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-features {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .hero-card {
+    position: static;
+    width: 100%;
+    max-width: 350px;
+    margin: 25px auto 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    padding: 60px 25px;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .hero-text p {
     font-size: 1rem;
   }
 
-  .hero-image {
-    margin-top: 2rem;
+  .hero-features {
+    grid-template-columns: 1fr;
   }
 
-  .conversion-box {
-    position: static;
-    margin-top: 1rem;
-  }
-}
-
-
-
-
-@media (max-width: 768px) {
-  .hero-content {
+  .hero-buttons {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
     text-align: center;
   }
 
-  .hero-text {
-    margin-right: 0;
+  .hero-image img {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .hero-section {
+    padding: 50px 20px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 8px 16px;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .hero-image {
-    margin-top: 2rem;
-    justify-content: center; /* ✅ center image on mobile */
-  }
-
-  .conversion-box {
-    position: static;
-    margin-top: 1rem;
-  }
 }
 
