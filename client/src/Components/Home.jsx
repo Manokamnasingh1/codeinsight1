@@ -5,29 +5,31 @@ import laptopImage from "../assets/laptop.jpg";
 export default function Hero() {
   return (
     <section id="home" className="hero-section">
-      <div className="hero-content">
+      <div className="hero-container">
 
-        {/* Left Content */}
+        {/* Hero Content */}
         <div className="hero-text">
 
           <span className="hero-badge">
-            🚀 Trusted Web Development Partner
+            ⚡ We Build Digital Success
           </span>
 
           <h1>
-            Professional Websites <br />
-            That Help Your Business Grow
+            We Build Websites
+            <br />
+            That Grow Your
+            <br />
+            <span>Business</span>
           </h1>
 
           <p>
-            At <strong>CodeInsight</strong>, we design and develop modern,
-            responsive, and high-performing websites that help businesses,
-            startups, and entrepreneurs establish a strong online presence.
+            We create fast, modern and responsive websites that help your
+            business stand out, attract more customers and grow online.
           </p>
 
           <div className="hero-buttons">
             <a href="#request" className="primary-btn">
-              Get Free Quote
+              Get Free Quote →
             </a>
 
             <a href="#services" className="secondary-btn">
@@ -35,56 +37,58 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="hero-features">
-
-            <div className="feature-item">
-              <span>⚡</span>
-              <p>Fast Delivery</p>
-            </div>
-
-            <div className="feature-item">
-              <span>📱</span>
-              <p>Responsive Design</p>
-            </div>
-
-            <div className="feature-item">
-              <span>💼</span>
-              <p>Professional UI</p>
-            </div>
-
-            <div className="feature-item">
-              <span>💬</span>
-              <p>Free Support</p>
-            </div>
-
-          </div>
-
         </div>
 
-        {/* Right Image */}
+        {/* Hero Image */}
         <div className="hero-image">
-
           <img
             src={laptopImage}
-            alt="CodeInsight Website Development"
+            alt="Website Development"
           />
+        </div>
 
-          <div className="hero-card">
+      </div>
 
-            <h3>Why Choose Us?</h3>
+      {/* Why Choose Us */}
 
-            <ul>
-              <li>✔ Modern UI/UX</li>
-              <li>✔ Mobile Friendly</li>
-              <li>✔ SEO Optimized</li>
-              <li>✔ Affordable Pricing</li>
-            </ul>
+      <div className="why-section">
 
+        <p className="why-title">
+          WHY CHOOSE US
+        </p>
+
+        <h2>
+          We Deliver More Than
+          <br />
+          <span>Just Code</span>
+        </h2>
+
+        <div className="why-grid">
+
+          <div className="why-card">
+            <div className="icon">💻</div>
+            <h4>Modern Design</h4>
+          </div>
+
+          <div className="why-card">
+            <div className="icon">🚀</div>
+            <h4>Fast Delivery</h4>
+          </div>
+
+          <div className="why-card">
+            <div className="icon">₹</div>
+            <h4>Affordable Pricing</h4>
+          </div>
+
+          <div className="why-card">
+            <div className="icon">🎧</div>
+            <h4>Client Support</h4>
           </div>
 
         </div>
 
       </div>
+
     </section>
   );
-      }
+}
