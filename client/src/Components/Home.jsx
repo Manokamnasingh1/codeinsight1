@@ -15,12 +15,12 @@ export default function Hero() {
           </span>
 
           <h1>
-            We Build Websites
-            <br />
-            That Grow Your
-            <br />
-            <span>Business</span>
-          </h1>
+  Complete Web & App
+  <br />
+  Solutions for Your
+  <br />
+  <span>Business</span>
+</h1>
 
           <p>
             We create fast, modern and responsive websites that help your
