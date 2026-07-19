@@ -23,8 +23,7 @@ export default function Hero() {
 </h1>
 
           <p>
-            We create fast, modern and responsive websites that help your
-            business stand out, attract more customers and grow online.
+            We design and develop websites, mobile apps, custom software, UI/UX, and digital solutions that help businesses grow, automate operations, and succeed online.
           </p>
 
           <div className="hero-buttons">
